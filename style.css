@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background-color:rgb(173, 157, 157);
+}
+
+span {
+    position: absolute;
+    /* background: url("images/heart.gif"); */
+    background: url("images/hearts.gif");
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    animation: animate 2s linear infinite;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -1000%);
+        opacity: 0;
+        filter: hue-rotate(720deg);
+    }
+}
